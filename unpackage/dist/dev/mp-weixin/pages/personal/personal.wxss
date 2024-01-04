@@ -1,0 +1,21 @@
+
+page{
+	display: flex;
+	/* width: 100px; */
+}
+.avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+	float: left;
+}
+.username {
+	float: left;
+    margin-top: 10px;
+    font-size: 36rpx
+}
+.top-box{
+	  width: 100%;
+	  background: gray;
+}
+

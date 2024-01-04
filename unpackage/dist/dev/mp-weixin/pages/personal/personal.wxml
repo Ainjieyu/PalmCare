@@ -1,0 +1,1 @@
+<view class="body"><view class="top-box"><block wx:if="{{1}}"><view data-event-opts="{{[['tap',[['toBaseInfo']]]]}}" class="row-box" bindtap="__e"><image class="avatar" src="../../static/avatar/avatar.png"></image><view class="username">用户名</view></view></block></view></view>
