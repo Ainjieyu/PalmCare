@@ -148,9 +148,216 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--13-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/邵丽微/Documents/HBuilderProjects/PalmCare/pages/personal/personal.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js):\nSyntaxError: Missing semicolon. (192:24)\n    at instantiate (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:67:32)\n    at constructor (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:364:12)\n    at TypeScriptParserMixin.raise (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:3365:19)\n    at TypeScriptParserMixin.semicolon (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:3755:10)\n    at TypeScriptParserMixin.parseExpressionStatement (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13525:10)\n    at TypeScriptParserMixin.parseExpressionStatement (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9328:26)\n    at TypeScriptParserMixin.parseStatementContent (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13101:19)\n    at TypeScriptParserMixin.parseStatementContent (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9223:18)\n    at TypeScriptParserMixin.parseStatementLike (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12952:17)\n    at TypeScriptParserMixin.parseStatementListItem (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12937:17)\n    at TypeScriptParserMixin.parseBlockOrModuleBlockBody (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13558:61)\n    at TypeScriptParserMixin.parseBlockBody (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13550:10)\n    at TypeScriptParserMixin.parseBlock (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13538:10)\n    at TypeScriptParserMixin.parseFunctionBody (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12287:24)\n    at TypeScriptParserMixin.parseFunctionBodyAndFinish (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12271:10)\n    at TypeScriptParserMixin.parseFunctionBodyAndFinish (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:8952:18)\n    at TypeScriptParserMixin.parseMethod (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12226:31)\n    at TypeScriptParserMixin.parseMethod (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9864:26)\n    at TypeScriptParserMixin.parseObjectMethod (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12120:19)\n    at TypeScriptParserMixin.parseObjPropValue (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12154:23)\n    at TypeScriptParserMixin.parseObjPropValue (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9482:18)\n    at TypeScriptParserMixin.parsePropertyDefinition (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12083:17)\n    at TypeScriptParserMixin.parseObjectLike (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11993:21)\n    at TypeScriptParserMixin.parseExprAtom (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11464:23)\n    at TypeScriptParserMixin.parseExprSubscripts (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11171:23)\n    at TypeScriptParserMixin.parseUpdate (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11153:21)\n    at TypeScriptParserMixin.parseMaybeUnary (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11127:23)\n    at TypeScriptParserMixin.parseMaybeUnary (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9590:20)\n    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10956:61)\n    at TypeScriptParserMixin.parseExprOps (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10962:23)\n    at TypeScriptParserMixin.parseMaybeConditional (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10937:23)\n    at TypeScriptParserMixin.parseMaybeAssign (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10895:21)\n    at TypeScriptParserMixin.parseMaybeAssign (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9529:20)\n    at D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10863:39\n    at TypeScriptParserMixin.allowInAnd (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12635:16)\n    at TypeScriptParserMixin.parseMaybeAssignAllowIn (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10863:17)\n    at TypeScriptParserMixin.parseExportDefaultExpression (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:14235:22)\n    at TypeScriptParserMixin.parseExportDefaultExpression (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9182:18)\n    at TypeScriptParserMixin.parseExport (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:14139:25)\n    at TypeScriptParserMixin.parseExport (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9164:20)\n    at TypeScriptParserMixin.parseStatementContent (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13073:27)\n    at TypeScriptParserMixin.parseStatementContent (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9223:18)\n    at TypeScriptParserMixin.parseStatementLike (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12952:17)\n    at TypeScriptParserMixin.parseModuleItem (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12933:17)\n    at TypeScriptParserMixin.parseBlockOrModuleBlockBody (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13558:36)\n    at TypeScriptParserMixin.parseBlockBody (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:13550:10)\n    at TypeScriptParserMixin.parseProgram (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12842:10)\n    at TypeScriptParserMixin.parseTopLevel (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12832:25)\n    at TypeScriptParserMixin.parse (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:14740:10)\n    at TypeScriptParserMixin.parse (D:\\360Downloads\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9891:18)");
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      showDropdown: true,
+      iconList: [{
+        icon: 'moneybagfill',
+        color: 'blue',
+        badge: 0,
+        name: '待接单'
+      }, {
+        icon: 'presentfill',
+        color: 'red',
+        badge: 0,
+        name: '待上门',
+        bindtap: "bindZan"
+      }, {
+        icon: 'formfill',
+        color: 'purple',
+        badge: 11,
+        name: '待评价',
+        bindtap: "showResource"
+      }, {
+        icon: 'shopfill',
+        color: 'green',
+        badge: 0,
+        name: '返修/售后',
+        bindtap: "bindPoint"
+      }],
+      iconOtherList: [{
+        icon: 'location',
+        color: 'blue',
+        badge: 0,
+        name: '地址管理'
+      }, {
+        icon: 'service',
+        color: 'blue',
+        badge: 0,
+        name: '电话客服',
+        bindtap: "bindZan"
+      }, {
+        icon: 'mark',
+        color: 'blue',
+        badge: 0,
+        name: '在线客服',
+        bindtap: "showResource"
+      }, {
+        icon: 'mail',
+        color: 'blue',
+        badge: 0,
+        name: '投诉',
+        bindtap: "bindCollect"
+      }, {
+        icon: 'settings',
+        color: 'blue',
+        badge: 0,
+        name: '设置',
+        bindtap: "bindZan"
+      }],
+      isH5Plus: false,
+      userinfo: {},
+      orderTypeLise: [
+      //name-标题 icon-图标 badge-角标
+      {
+        name: '待付款',
+        icon: 'l1.png',
+        badge: 1
+      }, {
+        name: '待发货',
+        icon: 'l2.png',
+        badge: 2
+      }, {
+        name: '待收货',
+        icon: 'l3.png',
+        badge: 6
+      }, {
+        name: '待评价',
+        icon: 'l4.png',
+        badge: 9
+      }, {
+        name: '退换货',
+        icon: 'l5.png',
+        badge: 0
+      }],
+      severList: [[{
+        name: '基本信息',
+        icon: 'point.png'
+      }, {
+        name: '职称变动',
+        icon: 'quan.png'
+      }, {
+        name: '职务变动',
+        icon: 'momey.png'
+      }, {
+        name: '教育经历',
+        icon: 'renw.png'
+      }, {
+        name: '工作经历',
+        icon: 'bank.png'
+      }]]
+    };
+  },
+  onLoad: function onLoad() {
+    //加载
+    this.init();
+  },
+  onReady: function onReady() {},
+  methods: {
+    init: function init() {
+      //用户信息
+      this.userinfo = {
+        face: '../../static/HM-PersonalCenter/face.jpeg',
+        username: "VIP会员10240",
+        integral: "1435"
+      };
+    },
+    //用户点击订单类型
+    toOrderType: function toOrderType(index) {
+      uni.showToast({
+        title: this.orderTypeLise[index].name
+      });
+    },
+    //用户点击列表项
+    dropdown: function dropdown(list_i, li_i) {
+      // // if(li_i === 0){
+      // 在DOM渲染完成后，引用已经被正确绑定了
+
+      // const node = document.querySelector(`.list-item-${li_i}`);
+      // console.log(node)
+      // // }
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

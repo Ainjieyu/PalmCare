@@ -43,20 +43,20 @@
 		</view>
 
 		<view class="list" v-for="(list,list_i) in severList" :key="list_i">
-			<view class="li" ref="itemRefs" v-for="(li,li_i) in list" @tap="dropdown(list_i,li_i)"
+			<view class="li" v-for="(li,li_i) in list" @tap="dropdown(list_i,li_i)"
 				v-bind:class="{'noborder':li_i==list.length-1}" hover-class="hover" :key="li.name">
 				<view class="label">
 					<view class="icon">
 						<image :src="'../../static/HM-PersonalCenter/sever/'+li.icon"></image>
 					</view>
 					<view class="text">{{li.name}}</view>
-					<image class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
+					<image  class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
 
 				</view>
 				<view class="line">
 
 				</view>
-				<view v-if="showDropdown" class="info bg-blue">
+				<view  class="info bg-blue"v-if="showDropdown" >
 
 				</view>
 			</view>
@@ -69,7 +69,7 @@
 	export default {
 		data() {
 			return {
-				showDropdown: false,
+				showDropdown: true,
 				iconList: [{
 					icon: 'moneybagfill',
 					color: 'blue',
@@ -189,12 +189,7 @@
 			this.init();
 		},
 		onReady() {
-			dropdown(list_i, li_i) {
-				// // if(li_i === 0){
-				// 在DOM渲染完成后，引用已经被正确绑定了
-				console.log(this.$refs.itemRefs);
-				// // }
-			};
+	
 		},
 		methods: {
 			init() {
@@ -215,7 +210,9 @@
 				dropdown(list_i, li_i) {
 					// // if(li_i === 0){
 					// 在DOM渲染完成后，引用已经被正确绑定了
-					console.log(this.$refs.itemRefs);
+					
+					// const node = document.querySelector(`.list-item-${li_i}`);
+					// console.log(node)
 					// // }
 				}
 
