@@ -27,6 +27,24 @@
 page {
   background-color: #fff;
 }
+._table {
+  border-collapse: collapse;
+  margin: 5rpx;
+}
+._th,
+._td {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  /* 或者是 middle */
+}
+.table-row {
+  display: inline-block;
+  width: 33%;
+}
+.table-row2 {
+  display: inline-block;
+  width: 25%;
+}
 .line {
   height: 1rpx;
   background: #ddd;
@@ -77,11 +95,15 @@ page {
 }
 .list .info {
   width: 100%;
-  height: 350rpx;
-  display: flex;
+  text-align: justify;
+}
+.list .info text {
+  text-align: justify;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
 }
 .list .li {
-  width: 92%;
+  width: 96%;
   padding-left: 8%;
   border-bottom: solid 1rpx #e7e7e7;
   display: flex;

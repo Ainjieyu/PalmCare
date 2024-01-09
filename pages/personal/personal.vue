@@ -42,26 +42,111 @@
 			</view>
 		</view>
 
-		<view class="list" v-for="(list,list_i) in severList" :key="list_i">
-			<view class="li" v-for="(li,li_i) in list" @tap="dropdown(list_i,li_i)"
-				v-bind:class="{'noborder':li_i==list.length-1}" hover-class="hover" :key="li.name">
+		<view class="list">
+			<view class="li " @tap="dropdown(0)" hover-class="hover">
 				<view class="label">
 					<view class="icon">
-						<image :src="'../../static/HM-PersonalCenter/sever/'+li.icon"></image>
+						<image src="../../static/HM-PersonalCenter/sever/point.png"></image>
 					</view>
-					<view class="text">{{li.name}}</view>
-					<image  class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
+					<view class="text">基本信息</view>
+					<image class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
 
 				</view>
-				<view class="line">
+				<view class="line" v-if="showdrop0"></view>
+				<view class="info bg-gray" v-if="showdrop0">
+					<text class="text-bold">工号：</text> 12344<text class="text-bold">姓名：</text>卢丹 <text
+						class="text-bold">性别：</text> <text>女\n\n</text>
+					<text class="text-bold">护士层级：</text> 事业编制 <text class="text-bold">护理单元：</text>感染科病区
+				</view>
+			</view>
+			<view class="li " @tap="dropdown(1)" hover-class="hover">
+				<view class="label">
+					<view class="icon">
+						<image src="../../static/HM-PersonalCenter/sever/momey.png"></image>
+					</view>
+					<view class="text">职务变动</view>
+					<image class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
 
 				</view>
-				<view  class="info bg-blue"v-if="showDropdown" >
+				<view class="line" v-if="showdrop1"></view>
+				<view class="info bg-gray" v-if="showdrop1">
+					<table>
+						<tr class="table-row">
+							<th>职务名称</th>
+							<th v-for="item in PositionList" :key="item.PositionTime">{{item.PositionName}}</th>
 
+						</tr>
+						<tr class="table-row">
+							<td>行政职务</td>
+							<td v-for="item in PositionList" :key="item.PositionTime">{{item.PositionJob}}</td>
+						</tr>
+						<tr class="table-row">
+							<td>任命时间</td>
+							<td v-for="item in PositionList" :key="item.PositionTime">{{item.PositionTime}}</td>
+						</tr>
+					</table>
+				</view>
+			</view>
+			<view class="li " @tap="dropdown(2)" hover-class="hover">
+				<view class="label">
+					<view class="icon">
+						<image src="../../static/HM-PersonalCenter/sever/quan.png"></image>
+					</view>
+					<view class="text">职称变动</view>
+					<image class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
+
+				</view>
+				<view class="line" v-if="showdrop2"></view>
+				<view class="info  bg-gray" v-if="showdrop2">
+					<table>
+						<tr class="table-row2">
+							<th>资格名称</th>
+							<th v-for="item in professionalList" :key="item.professionalTime">{{item.professionalName}}</th>
+						</tr>
+						<tr class="table-row2">
+							<td>资格获得时间</td>
+							<td v-for="item in professionalList" :key="item.professionalTime">{{item.professionalGetTime}}</td>
+						</tr>
+						<tr class="table-row2">
+							<td>聘任职称</td>
+							<td v-for="item in professionalList" :key="item.professionalTime">{{item.professionalJob}}</td>
+						</tr>
+						<tr class="table-row2">
+							<td>聘任时间</td>
+							<td v-for="item in professionalList" :key="item.professionalTime">{{item.professionalTime}}</td>
+						</tr>
+					</table>
+				</view>
+			</view>
+			<view class="li " @tap="dropdown(3)" hover-class="hover">
+				<view class="label">
+					<view class="icon">
+						<image src="../../static/HM-PersonalCenter/sever/renw.png"></image>
+					</view>
+					<view class="text">教育经历</view>
+					<image class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
+
+				</view>
+				<view class="line" v-if="showdrop3"></view>
+				<view class="info  bg-gray" v-if="showdrop3">
+				</view>
+			</view>
+
+			<view class="li noborder" @tap="dropdown(4)" v-bind:class="{'noborder':li_i==0}" hover-class="hover">
+				<view class="label">
+					<view class="icon">
+						<image src="../../static/HM-PersonalCenter/sever/bank.png"></image>
+					</view>
+					<view class="text">工作经历</view>
+					<image class="to" src="../../static/HM-PersonalCenter/drop.png"></image>
+
+				</view>
+				<view class="line" v-if="showdrop4"></view>
+				<view class="info  bg-gray" v-if="showdrop4">
 				</view>
 			</view>
 		</view>
-
+	</view>
 	</view>
 </template>
 
@@ -69,127 +154,88 @@
 	export default {
 		data() {
 			return {
-				showDropdown: true,
-				iconList: [{
-					icon: 'moneybagfill',
-					color: 'blue',
-					badge: 0,
-					name: '待接单'
-				}, {
-					icon: 'presentfill',
-					color: 'red',
-					badge: 0,
-					name: '待上门',
-					bindtap: "bindZan"
-				}, {
-					icon: 'formfill',
-					color: 'purple',
-					badge: 11,
-					name: '待评价',
-					bindtap: "showResource"
-				}, {
-					icon: 'shopfill',
-					color: 'green',
-					badge: 0,
-					name: '返修/售后',
-					bindtap: "bindPoint"
-				}],
-				iconOtherList: [{
-					icon: 'location',
-					color: 'blue',
-					badge: 0,
-					name: '地址管理'
-				}, {
-					icon: 'service',
-					color: 'blue',
-					badge: 0,
-					name: '电话客服',
-					bindtap: "bindZan"
-				}, {
-					icon: 'mark',
-					color: 'blue',
-					badge: 0,
-					name: '在线客服',
-					bindtap: "showResource"
-				}, {
-					icon: 'mail',
-					color: 'blue',
-					badge: 0,
-					name: '投诉',
-					bindtap: "bindCollect"
-				}, {
-					icon: 'settings',
-					color: 'blue',
-					badge: 0,
-					name: '设置',
-					bindtap: "bindZan"
-				}],
-				//#ifdef APP-PLUS
-				isH5Plus: true,
-				//#endif
-				//#ifndef APP-PLUS
-				isH5Plus: false,
-				//#endif
+				showdrop0: false,
+				showdrop1: false,
+				showdrop2: false,
+				showdrop3: false,
+				showdrop4: false,
+				professionalList:[
+					{
+						professionalName:'护师',
+						professionalGetTime:'2012-05-01',
+						professionalJob:'护师',
+						professionalTime:'2015-07-30',
+						Age:'5'
+					},
+					{
+						professionalName:'护师',
+						professionalGetTime:'2012-05-01',
+						professionalJob:'护师',
+						professionalTime:'2015-07-30',
+						Age:'5'
+					},
+				],
+				PositionList: [{
+						PositionName: '呼吸内副护士长',
+						PositionJob: '副护士长',
+						PositionTime: '2015-06-01'
+					},
+					{
+						PositionName: '呼吸内副护士长',
+						PositionJob: '副护士长',
+						PositionTime: '2015-06-01'
+					},
+					{
+						PositionName: '呼吸内副护士长',
+						PositionJob: '副护士长',
+						PositionTime: '2015-06-01'
+					},
+				],
 				userinfo: {},
-				orderTypeLise: [
-					//name-标题 icon-图标 badge-角标
-					{
-						name: '待付款',
-						icon: 'l1.png',
-						badge: 1
+				severList: [{
+						name: '基本信息',
+						icon: 'point.png'
 					},
 					{
-						name: '待发货',
-						icon: 'l2.png',
-						badge: 2
+						name: '职称变动',
+						icon: 'quan.png'
 					},
 					{
-						name: '待收货',
-						icon: 'l3.png',
-						badge: 6
+						name: '职务变动',
+						icon: 'momey.png'
 					},
 					{
-						name: '待评价',
-						icon: 'l4.png',
-						badge: 9
+						name: '教育经历',
+						icon: 'renw.png'
 					},
 					{
-						name: '退换货',
-						icon: 'l5.png',
-						badge: 0
-					}
+						name: '工作经历',
+						icon: 'bank.png'
+					},
 				],
-				severList: [
-					[{
-							name: '基本信息',
-							icon: 'point.png'
-						},
-						{
-							name: '职称变动',
-							icon: 'quan.png'
-						},
-						{
-							name: '职务变动',
-							icon: 'momey.png'
-						},
-						{
-							name: '教育经历',
-							icon: 'renw.png'
-						},
-						{
-							name: '工作经历',
-							icon: 'bank.png'
-						},
-					],
-				],
+			}
+		},
+		computed: {
+			computedIfName() {
+				return li_i => {
+					if (this[`iname${li_i}`]) {
+						return true
+					} else
+						return false
+				};
 			}
 		},
 		onLoad() {
 			//加载
 			this.init();
 		},
-		onReady() {
-	
+		onShow() {
+			// 页面加载时执行的代码
+			// 在mounted钩子中，动态地为每个元素生成一个唯一的v-if变量名
+			this.severList.forEach((li, li_i) => {
+				const ifName = `iname${li_i}`;
+				this[ifName] = li_i % 2 ? true : false;
+			});
 		},
 		methods: {
 			init() {
@@ -200,21 +246,20 @@
 					integral: "1435"
 				}
 			},
-			//用户点击订单类型
-			toOrderType(index) {
-				uni.showToast({
-					title: this.orderTypeLise[index].name
-				});
-			},
 			//用户点击列表项
-				dropdown(list_i, li_i) {
-					// // if(li_i === 0){
-					// 在DOM渲染完成后，引用已经被正确绑定了
-					
-					// const node = document.querySelector(`.list-item-${li_i}`);
-					// console.log(node)
-					// // }
+			dropdown(li_i) {
+				if (li_i === 0) {
+					this.showdrop0 = !this.showdrop0
+				} else if (li_i === 1) {
+					this.showdrop1 = !this.showdrop1
+				} else if (li_i === 2) {
+					this.showdrop2 = !this.showdrop2
+				} else if (li_i === 3) {
+					this.showdrop3 = !this.showdrop3
+				} else if (li_i === 4) {
+					this.showdrop4 = !this.showdrop4
 				}
+			}
 
 		}
 	}
@@ -223,6 +268,26 @@
 <style lang="scss">
 	page {
 		background-color: #fff
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 5upx;
+	}
+
+	th,
+	td {
+		border: 1px solid #ccc;
+		 vertical-align: middle; /* 或者是 middle */
+	}
+
+	.table-row {
+		display: inline-block;
+		width: 33%;
+	}
+	.table-row2{
+		display: inline-block;
+		width: 25%;
 	}
 
 	.line {
@@ -284,13 +349,18 @@
 
 		.info {
 			width: 100%;
-			height: 350upx;
-			display: flex;
+			// height: 120upx;
+			text-align: justify;
 
+			text {
+				text-align: justify;
+				margin-left: 20upx;
+				margin-top: 8upx;
+			}
 		}
 
 		.li {
-			width: 92%;
+			width: 96%;
 			// height: 100upx;
 			padding-left: 8%;
 			border-bottom: solid 1upx #e7e7e7;
